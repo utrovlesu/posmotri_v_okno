@@ -43,3 +43,142 @@ ol {
   width: 1140px;
   gap: 30px;
 }
+
+.search-form {
+  display: flex;
+  gap: 40px;
+}
+
+.content__list {
+  height: 536px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.content__details {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  margin-bottom: 28px;
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 500;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+
+.content__accent {
+color: #545050;
+}
+
+.result__video-container {
+  width: 711px;
+height: 386px;
+position: relative;
+}
+
+.result__video{
+  position: absolute;
+width: 100%;
+height: 100%;
+}
+
+.content__list-item:not(:last-child) {
+  padding-bottom: 32px;
+}
+
+.content__video-card {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 1fr 194px;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+height: 103px;
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+font-weight: 400;
+margin-bottom: 5px;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__video-card-title {
+  font-family: Oswald;
+font-size: 30px;
+font-weight: 500;
+margin-bottom: 6px;
+}
+
+.content__video-card-description {
+  font-size: 18px;
+font-weight: 400;
+  line-height: 16.2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Форма */
+
+fieldset {
+  border:none;
+}
+
+.search-form__label {
+  width: fit-content;
+  display: flex;
+  gap: 5px;
+}
+
+.search-form__pseudo-checkbox, button {
+  cursor: pointer;
+}
+
+.search-form__textfield {
+  font-family: Fira Sans Condensed;
+  appearance: none;
+  background: black;
+  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  border-right: 0;
+  width: 225px;
+  height: 27px;
+}
+
+input::placeholder {
+  font-family: Fira Sans Condensed;
+  color: rgba(255, 255, 255, 0.7);
+font-size: 18px;
+font-weight: 400;
+line-height: 22px;
+}
+
+.search-form__pseudo-checkbox {
+  border: 1px solid #ffffff;
+  width: 19px;
+height: 19px;
+display: block;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+/* END Форма */
