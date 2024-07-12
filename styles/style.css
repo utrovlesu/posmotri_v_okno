@@ -1,3 +1,4 @@
+/* stylelint-disable color-hex-length */
 *,
 *::before,
 *::after {
@@ -47,10 +48,11 @@ ol {
 .search-form {
   display: flex;
   gap: 40px;
+  align-items: flex-end;
 }
 
 .content__list {
-  height: 536px;
+  height: 298px;
   overflow-y: scroll;
   position: relative;
 }
@@ -146,6 +148,10 @@ fieldset {
   gap: 5px;
 }
 
+.search-form__label:has(:focus-visible) {
+  border: 1px solid #ffffff;
+}
+
 .search-form__pseudo-checkbox, button {
   cursor: pointer;
 }
@@ -153,12 +159,18 @@ fieldset {
 .search-form__textfield {
   font-family: Fira Sans Condensed;
   appearance: none;
-  background: black;
+  background: #000000;
   border-bottom: 1px solid #ffffff;
   border-top: 1px solid #ffffff;
   border-right: 0;
   width: 225px;
   height: 27px;
+  color: #FFF;
+}
+
+.search-form__textfield:active{
+  border: 1px solid #ffffff;
+
 }
 
 input::placeholder {
@@ -176,9 +188,42 @@ height: 19px;
 display: block;
 }
 
+input[type='checkbox']:checked + span::before {
+	content: "";
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+  display: block;
+  border: 2px solid #000;
+  }
+
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
+}
+
+.button {
+  border: 1px solid #ffffff;
+  padding: 6px 0;
+  background: #000000;
+  color: #ffffff;
+font-family: Fira Sans Condensed;
+font-size: 18px;
+font-weight: 700;
+line-height: 22px;
+}
+
+.button:focus-visible {
+  border: 2px solid #ffffff;
+}
+
+.more-button {
+  width: 100%;
+}
+
+.search-form__submit-button {
+  width: 194px;
+height: 34px;
 }
 
 /* END Форма */
