@@ -1,5 +1,6 @@
 /* stylelint-disable color-function-notation */
 /* stylelint-disable color-hex-length */
+
 *,
 *::before,
 *::after {
@@ -15,9 +16,11 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  align-items: center;
 }
 
 h1,
@@ -44,7 +47,6 @@ ol {
   align-items: flex-end;
   width: 1140px;
   gap: 30px;
-  padding-top: 141px;
 }
 
 .search-form {
@@ -56,7 +58,7 @@ ol {
   height: 298px;
   overflow: auto;
   position: relative;
-  scrollbar-width: none;
+  scrollbar-width: 15px;
 }
 
 .content__list::-webkit-scrollbar {
@@ -70,7 +72,7 @@ ol {
 
 .title {
   margin-bottom: 20px;
-  font-family: Oswald;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 75px;
   font-weight: 500;
   line-height: 0.95;
@@ -91,6 +93,7 @@ ol {
   position: relative;
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .content__list-item:not(:last-child) {
@@ -106,6 +109,8 @@ ol {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .search-form__fieldset-title {
@@ -122,18 +127,23 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 6px;
   text-transform: uppercase;
   line-height: 1;
+  text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 200px;
 }
 
 .content__video-card-description {
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
+  max-width: 200px;
 }
 
 .visually-hidden {
@@ -156,6 +166,7 @@ fieldset {
   width: fit-content;
   display: flex;
   gap: 5px;
+  align-items: center;
 }
 
 .search-form__checkbox-list .search-form__label,
@@ -164,9 +175,9 @@ fieldset {
 }
 
 .search-form__textfield {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   appearance: none;
-  background: #000000;
+  background: transparent;
   border-bottom: 1px solid #ffffff;
   border-top: 1px solid #ffffff;
   border-right: 0;
@@ -176,7 +187,7 @@ fieldset {
 }
 
 input::placeholder {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   color: rgba(255, 255, 255, 0.7);
   font-size: 18px;
   font-weight: 400;
@@ -188,15 +199,16 @@ input::placeholder {
   width: 19px;
   height: 19px;
   display: block;
+  padding: 2px;
 }
 
 input[type='checkbox']:checked + span::before {
   content: '';
-  width: 17px;
-  height: 17px;
+  width: 13px;
+  height: 13px;
   background-color: #fff;
   display: block;
-  border: 2px solid #000;
+  
 }
 
 .search-form__checkbox-list {
@@ -205,11 +217,11 @@ input[type='checkbox']:checked + span::before {
 }
 
 .button {
-  border: 1px solid #ffffff;
+  border: 1px solid currentColor;
   padding: 6px 0;
-  background: #000000;
+  background: transparent;
   color: #ffffff;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
@@ -240,6 +252,7 @@ input[type='checkbox']:checked + span::before {
 .search-form__textfield:active,
 .content__card-link:focus-visible {
   outline: 1px solid #ffffff;
+  outline-offset: 2px;
 }
 
 .search-form__label:hover .search-form__label-text,
@@ -251,10 +264,6 @@ input[type='checkbox']:checked + span::before {
 .button:active,
 .content__card-link_current {
   background: #545050;
-}
-
-.content__card-link_current .content__video-card-thumbnail {
-  border: 1px dashed #7e7e7e;
 }
 
 /* END Состояния */
