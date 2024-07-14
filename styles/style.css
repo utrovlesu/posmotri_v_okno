@@ -58,12 +58,8 @@ ol {
   height: 298px;
   overflow: auto;
   position: relative;
-  scrollbar-width: 15px;
 }
 
-.content__list::-webkit-scrollbar {
-  width: 15px;
-}
 
 .content__details {
   width: 100%;
@@ -124,7 +120,7 @@ ol {
   text-decoration: none;
   color: #fff;
   display: block;
-  margin: 2px;
+  margin: 4px;
 }
 
 .content__video-card-title {
@@ -268,7 +264,8 @@ input[type='checkbox']:checked + span::before {
 }
 
 .button:active,
-.content__card-link_current {
+.content__card-link_current,
+.content__card-link:active {
   background: #545050;
 }
 
